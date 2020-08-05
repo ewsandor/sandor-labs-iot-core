@@ -1,0 +1,9 @@
+#ifndef _SLIOT_WIFI_H_
+#define _SLIOT_WIFI_H_
+
+#include "sliot_core_config.h"
+
+#define SLIOT_WIFI_DEFAULT_SSID     "sol"
+#define SLIOT_WIFI_DEFAULT_PASSWORD "marine-funky-wonder-discovered-9"
+
+#endif //_SLIOT_WIFI_H_

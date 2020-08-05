@@ -1,0 +1,10 @@
+#ifndef _SLIOT_MQTT_CONFIG_H_
+#define _SLIOT_MQTT_CONFIG_H_
+
+#include "sliot_core_config.h"
+
+#define SLIOT_MQTT_DEFAULT_HOST       "hostname"
+#define SLIOT_MQTT_DEFAULT_USER       "user"
+#define SLIOT_MQTT_DEFAULT_PASSWORD   "password"
+
+#endif _SLIOT_MQTT_CONFIG_H_
