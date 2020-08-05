@@ -2,7 +2,7 @@
  *  Basic program to test Sandor Labortories IoT Core
  */
 
-#include "sliot_core.h"
+#include "inc/sliot_core.h"
 
 uint32_t sliot_core_test_counter;
 

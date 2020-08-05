@@ -3,7 +3,7 @@
 
 #include "Arduino.h"
 //Include per project config
-#include "sliot_core_config.h"
+#include "../config/sliot_core_config.h"
 
 //Initialize Sandor Laboratories IoT Core
 boolean sliot_core_init
