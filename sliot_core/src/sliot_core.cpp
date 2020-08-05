@@ -1,4 +1,4 @@
-#include "../inc/sliot_core.h"
+#include "../inc/sliot_core.hpp"
 
 boolean sliot_core_init
 (

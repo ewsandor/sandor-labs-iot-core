@@ -6,8 +6,8 @@
 #define _SLIOT_CORE_INTERNAL_H_
 
 //Include per project config
-#include "../config/sliot_core_config.h"
+#include "../config/sliot_core_config.hpp"
 //Include API Definitions
-#include "../api/sliot_core_api.h"
+#include "../api/sliot_core_api.hpp"
 
 #endif //_SLIOT_CORE_INTERNAL_H_

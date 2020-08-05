@@ -1,4 +1,4 @@
-#include "../inc/sliot_serial.h"
+#include "../inc/sliot_serial.hpp"
 
 // Initial serial communication
 boolean sliot_serial_init

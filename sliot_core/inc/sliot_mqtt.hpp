@@ -1,7 +1,7 @@
 #ifndef _SLIOT_MQTT_H_
 #define _SLIOT_MQTT_H_
 
-#include "sliot_core_internal.h"
+#include "sliot_core_internal.hpp"
 
 #define SLIOT_MQTT_DEFAULT_HOST       "x-mqtt"
 #define SLIOT_MQTT_DEFAULT_USER       "iot_test"

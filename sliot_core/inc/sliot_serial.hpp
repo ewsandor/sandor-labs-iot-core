@@ -2,8 +2,8 @@
 #define _SLIOT_SERIAL_H_
 
 #include "Arduino.h"
-#include "sliot_core_internal.h"
-#include "../config/sliot_serial_config.h"
+#include "sliot_core_internal.hpp"
+#include "../config/sliot_serial_config.hpp"
 
 // Initial serial communication
 boolean sliot_serial_init
