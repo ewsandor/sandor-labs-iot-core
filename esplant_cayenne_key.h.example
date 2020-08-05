@@ -1,0 +1,8 @@
+#ifndef _ESPLANT_CAYENNE_KEY_H_
+#define _ESPLANT_CAYENNE_KEY_H_
+
+#define ESPLANT_CAYENNE_MQTT_USERNAME    "your_cayenne_username_key"
+#define ESPLANT_CAYENNE_MQTT_PASSWORD    "your_cayenne_password_key"
+#define ESPLANT_CAYENNE_MQTT_CLIENT_ID   "your_cayenne_cilent_id"
+
+#endif //_ESPLANT_CAYENNE_KEY_H_
