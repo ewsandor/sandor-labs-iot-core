@@ -1,5 +1,6 @@
-Sandor Laboratories IoT Core
-2020 Ed Sandor
+**Sandor Laboratories IoT Core**
+
+*2020 Ed Sandor*
 
 This project defines a library that may be used to quickly start Internet of Things projects by wrapping common libraries and writing common utilities.
 
