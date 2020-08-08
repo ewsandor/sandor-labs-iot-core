@@ -10,6 +10,13 @@ class sliot_wifi_wifi_shield_c : public sliot_wifi_c
   public:
   // Initial sliot_wifi_wifi_shield communication
   static sliot_wifi_c *sliot_wifi_wifi_shield_init();
+
+  sliot_ip_address_c  get_ip_addr();
+  sliot_ip_address_c  get_subnet();
+  sliot_subnet_cidr_t get_subnet_cidr();
+  sliot_ip_address_c  get_gateway_addr();
+  sliot_ip_address_c  dns_lookup(char * hostname);
+  
   /* Connect to WiFi */
   sliot_result_e connect();
   sliot_result_e connect(sliot_time_ms_t timeout);

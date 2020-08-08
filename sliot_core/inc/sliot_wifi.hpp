@@ -2,6 +2,7 @@
 #define _SLIOT_WIFI_HPP_
 
 #include "../inc/sliot_core_internal.hpp"
+#include "../inc/sliot_internet_if.hpp"
 #include "../config/sliot_wifi_config.hpp"
 
 typedef enum
@@ -19,7 +20,7 @@ typedef enum
 /* Default timeout for Wi-Fi operations */
 #define SLIOT_WIFI_DEFAULT_TIMEOUT 5000
 
-class sliot_wifi_c
+class sliot_wifi_c : public sliot_internet_if
 {
   private:
 
@@ -29,6 +30,7 @@ class sliot_wifi_c
 
   public:
   sliot_wifi_c(void);
+
   /* Connect to WiFi */
   virtual sliot_result_e connect() = 0;
   /* Disconnect from WiFi */

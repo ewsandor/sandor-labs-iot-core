@@ -1,6 +1,7 @@
 #include "../inc/sliot_wifi.hpp"
 
 sliot_wifi_c::sliot_wifi_c(void)
+  : sliot_internet_if()
 {
   sliot_core_logger.println("Constructing Wi-Fi Object");  
   ssid     = SLIOT_WIFI_DEFAULT_SSID;

@@ -20,9 +20,13 @@ void setup
   if(sliot_wifi)
   {
     sliot_wifi->connect();
-    if(SLIOT_RESULT_SUCCESS == sliot_wifi->wait_for_connection(5000))
+    if(SLIOT_RESULT_SUCCESS == sliot_wifi->wait_for_connection(30000))
     {
       sliot_core_logger.println("Connected to Wi-Fi");      
+      sliot_core_logger.println("IP: " + sliot_wifi->get_ip_addr().string() + "/" + String(sliot_wifi->get_subnet_cidr()));
+      sliot_core_logger.println("Subnet: " + sliot_wifi->get_subnet().string());
+      sliot_core_logger.println("Gateway: " + sliot_wifi->get_gateway_addr().string());
+      sliot_core_logger.println("x-mqtt: " + sliot_wifi->dns_lookup("x-mqtt.lan.ewsandor.com").string());
     }
     else
     {

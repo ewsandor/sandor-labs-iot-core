@@ -2,6 +2,7 @@
 #define _SLIOT_CORE_API_H_
 
 #include "Arduino.h"
+#include "sliot_bit_ops.hpp"
 #include "sliot_types.hpp"
 //Include per project config
 #include "../config/sliot_core_config.hpp"

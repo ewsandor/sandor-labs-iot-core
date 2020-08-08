@@ -14,6 +14,52 @@ sliot_wifi_c *sliot_wifi_wifi_shield_c::sliot_wifi_wifi_shield_init()
   return sliot_wifi;
 }
 
+sliot_ip_address_c sliot_wifi_wifi_shield_c::get_ip_addr()
+{
+  sliot_ip_address_raw_t addr = SLIOT_BIT_OP_REVERSE_OCTET_32B(WiFi.localIP());
+
+  return *(new sliot_ip_address_c(addr));
+}
+sliot_ip_address_c sliot_wifi_wifi_shield_c::get_subnet()
+{
+  sliot_ip_address_raw_t  addr = SLIOT_BIT_OP_REVERSE_OCTET_32B(WiFi.localIP());
+  sliot_subnet_mask_t subnet_mask = SLIOT_BIT_OP_REVERSE_OCTET_32B(WiFi.subnetMask());
+
+  return *(new sliot_ip_address_c((subnet_mask & addr)));
+
+}
+sliot_subnet_cidr_t sliot_wifi_wifi_shield_c::get_subnet_cidr()
+{
+  sliot_subnet_cidr_t cidr = 0;
+  sliot_subnet_mask_t subnet_mask = SLIOT_BIT_OP_REVERSE_OCTET_32B(WiFi.subnetMask());
+
+  while(subnet_mask & (1<<31))
+  {
+    cidr++;
+    subnet_mask = subnet_mask << 1;
+  }
+
+  return cidr;
+}
+sliot_ip_address_c sliot_wifi_wifi_shield_c::get_gateway_addr()
+{
+  sliot_ip_address_raw_t addr = SLIOT_BIT_OP_REVERSE_OCTET_32B(WiFi.gatewayIP());
+
+  return *(new sliot_ip_address_c(addr));
+}
+sliot_ip_address_c sliot_wifi_wifi_shield_c::dns_lookup(char * hostname)
+{
+  sliot_ip_address_c resolved_ip = new sliot_ip_address_c((sliot_ip_address_raw_t)0);
+  IPAddress ip_lookup;
+ 
+  if( 1 == WiFi.hostByName(hostname, ip_lookup) )
+  {
+    resolved_ip = new sliot_ip_address_c(SLIOT_BIT_OP_REVERSE_OCTET_32B(ip_lookup));
+  }
+
+  return resolved_ip;
+}
+
 /* Connect to WiFi */
 sliot_result_e sliot_wifi_wifi_shield_c::connect()
 {
