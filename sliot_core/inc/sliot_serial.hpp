@@ -1,5 +1,5 @@
-#ifndef _SLIOT_SERIAL_H_
-#define _SLIOT_SERIAL_H_
+#ifndef _SLIOT_SERIAL_HPP_
+#define _SLIOT_SERIAL_HPP_
 
 #include "Arduino.h"
 #include "sliot_core_internal.hpp"
@@ -11,4 +11,4 @@ boolean sliot_serial_init
   void
 );
 
-#endif //_SLIOT_SERIAL_H_
+#endif //_SLIOT_SERIAL_HPP_

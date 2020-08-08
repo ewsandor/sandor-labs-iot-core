@@ -13,5 +13,7 @@ boolean sliot_serial_init
   delay(10);
   #endif
 
+  sliot_core_logger.println("Initialized Serial");
+
   return ret_val;
 }

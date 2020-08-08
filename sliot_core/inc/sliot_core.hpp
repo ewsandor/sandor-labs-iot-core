@@ -13,9 +13,9 @@
 #include "sliot_mqtt.hpp"
 #endif
 
-//ESP32 WiFi if enabled
-#ifdef SLIOT_WIFI_ESP32_ENABLED
-#include "sliot_wifi_esp32.hpp"
+//WIFI Sheild WiFi if enabled
+#ifdef SLIOT_WIFI_WIFI_SHIELD_ENABLED
+#include "sliot_wifi_wifi_shield.hpp"
 #endif
 
 #endif //_SLIOT_CORE_H_
