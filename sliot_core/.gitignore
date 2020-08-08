@@ -1,4 +1,3 @@
 *~
 *.swp
-sliot_mqtt_config.hpp
-sliot_wifi_config.hpp
+sliot_secrets.hpp
