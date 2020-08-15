@@ -1,6 +1,9 @@
 #ifndef _SLIOT_TYPES_HPP_
 #define _SLIOT_TYPES_HPP_
 
+typedef uint8_t  sliot_byte_t;
+typedef uint32_t sliot_size_t;
+
 typedef enum
 {
   /* Action completed successfully */

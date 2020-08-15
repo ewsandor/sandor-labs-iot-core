@@ -1,6 +1,7 @@
 #ifndef _SLIOT_INTERNET_TYPES_
 #define _SLIOT_INTERNET_TYPES_
 
+typedef uint32_t sliot_ip_port_t;
 typedef uint32_t sliot_subnet_mask_t;
 typedef uint8_t  sliot_subnet_cidr_t;
 
