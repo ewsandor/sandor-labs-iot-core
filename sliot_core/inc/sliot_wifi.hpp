@@ -20,7 +20,7 @@ typedef enum
 /* Default timeout for Wi-Fi operations */
 #define SLIOT_WIFI_DEFAULT_TIMEOUT 5000
 
-class sliot_wifi_c : public sliot_internet_if
+class sliot_wifi_c : public sliot_internet_if_c
 {
   private:
 

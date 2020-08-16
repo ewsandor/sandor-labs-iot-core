@@ -54,12 +54,12 @@ String sliot_ip_address_c::string()
 
 
 
-void sliot_internet_if::init()
+void sliot_internet_if_c::init()
 {
   ip_mode = SLIOT_IP_MODE_DHCP;
   memset(&static_ip_config, 0, sizeof(sliot_ip_config));
 }
-sliot_internet_if::sliot_internet_if()
+sliot_internet_if_c::sliot_internet_if_c()
 {
   init();
 }

@@ -4,7 +4,7 @@
 #include "sliot_core_internal.hpp"
 #include "../api/sliot_internet_types.hpp"
 
-class sliot_internet_if
+class sliot_internet_if_c
 {
   private:
   sliot_ip_mode_e ip_mode;
@@ -13,7 +13,7 @@ class sliot_internet_if
   void init();
 
   public:
-  sliot_internet_if();
+  sliot_internet_if_c();
   virtual sliot_ip_address_c  get_ip_addr() = 0;
   virtual sliot_ip_address_c  get_subnet() = 0;
   virtual sliot_subnet_cidr_t get_subnet_cidr() = 0;
