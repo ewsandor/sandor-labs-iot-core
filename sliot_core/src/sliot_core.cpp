@@ -15,6 +15,8 @@ sliot_result_e sliot_core_init()
   sliot_serial_init();
   #endif
 
+  sliot_core_logger.println("Sliot Device ID: 0x" + String(sliot_get_device_id(), HEX));
+
   #ifdef SLIOT_WIFI_WIFI_SHIELD_ENABLED
     sliot_wifi = sliot_wifi_wifi_shield_c::sliot_wifi_wifi_shield_init();
   #endif

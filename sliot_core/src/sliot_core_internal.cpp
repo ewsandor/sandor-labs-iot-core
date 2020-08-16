@@ -1,5 +1,10 @@
 #include "../inc/sliot_core_internal.hpp"
 
+sliot_device_id_t sliot_get_device_id()
+{
+  return SLIOT_DEVICE_ID;
+}
+
 sliot_core_logger_c::sliot_core_logger_c()
 {
   logging_device = &Serial;

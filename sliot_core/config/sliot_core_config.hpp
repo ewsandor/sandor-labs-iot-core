@@ -1,6 +1,9 @@
 #ifndef _SLIOT_CORE_CONFIG_H_
 #define _SLIOT_CORE_CONFIG_H_
 
+//Device ID should be unique for each instance (of type sliot_device_id_t)
+#define SLIOT_DEVICE_ID SLIOT_DEVICE_ID_UNSPECIFIED
+
 //Uncomment to enable verbose SLIOT CORE logging (SLIOT_SERIAL must also be enabled)
 #define SLIOT_CORE_VERBOSE_LOGGING_ENABLED
 

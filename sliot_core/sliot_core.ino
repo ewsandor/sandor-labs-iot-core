@@ -15,7 +15,7 @@ void setup
   sliot_core_test_counter = 0;
 
   result = sliot_core_init();
-  sliot_core_logger.println("Sliot Core Initialized.  Status " + String(result));
+  sliot_core_logger.println("Sliot Core Initialized. Status " + String(result));
 
   if(sliot_wifi)
   {

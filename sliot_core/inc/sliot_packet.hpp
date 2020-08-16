@@ -13,11 +13,10 @@ typedef struct {
   sliot_packet_node_type_e dest_type;
 } sliot_packet_node_hdr_s;
 
-typedef uint32_t sliot_packet_sliot_device_id_t;
 typedef uint32_t sliot_packet_sliot_device_port_t;
 typedef struct {
   sliot_packet_node_hdr_s          dest_hdr;
-  sliot_packet_sliot_device_id_t   device_id;
+  sliot_device_id_t                device_id;
   sliot_packet_sliot_device_port_t device_port;
 } sliot_packet_node_sliot_device_s;
 

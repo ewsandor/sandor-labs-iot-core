@@ -10,6 +10,10 @@
 //Include API Definitions
 #include "../api/sliot_core_api.hpp"
 
+/* Returns this instance's unique device ID */
+sliot_device_id_t sliot_get_device_id();
+
+/* Interface for sliot core libraries to log debug messages */
 class sliot_core_logger_c : public Print
 { 
   private:
