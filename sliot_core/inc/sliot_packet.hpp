@@ -27,11 +27,12 @@ typedef struct {
   sliot_ip_port_t                port;
 } sliot_packet_node_ip_s;
 
-typedef union {
+typedef union sliot_packet_node_u {
   sliot_packet_node_hdr_s          dest_hdr;
   sliot_packet_node_sliot_device_s sliot_device;
   sliot_packet_node_ip_s           ip;
-} sliot_packet_node_u;
+  sliot_packet_node_u() {};
+};
 
 typedef struct {
  sliot_byte_t *data_ptr;
@@ -43,8 +44,12 @@ class sliot_packet_c {
   sliot_packet_node_u source;
   sliot_packet_node_u destination;
   sliot_packet_data_s data;
+  void init();
 
   public:
+  sliot_packet_c(sliot_packet_node_u source, sliot_packet_node_u destination);
+  sliot_packet_c(sliot_packet_node_u source, sliot_packet_node_u destination, sliot_packet_data_s data);
+  sliot_packet_c(sliot_packet_node_u source, sliot_packet_node_u destination, sliot_byte_t *data_ptr, sliot_size_t num_bytes);
   sliot_packet_node_u get_source()      {return source;}
   sliot_packet_node_u get_destination() {return destination;}
   sliot_packet_data_s get_data()        {return data;}
