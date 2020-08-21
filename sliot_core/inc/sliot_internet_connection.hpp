@@ -27,6 +27,6 @@ class sliot_internet_connection_c {
   virtual sliot_size_t read(sliot_packet_data_s buffer);
   /* Flush all data written to interface in blocking call */
   virtual sliot_result_e flush();
-}
+};
 
 #endif //_SLIOT_INTERNET_CONNECTION_HPP_
